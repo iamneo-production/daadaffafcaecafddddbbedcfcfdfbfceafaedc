@@ -44,14 +44,10 @@ public class TaskService {
     }
 
     public Taskentity gettaskbyid(String id){
-        Optional<Taskentity> taskentity = repository.findByTaskId(id);
+        Optional<Taskentity> taskentity = repository.findbytaskId(id);
         if(taskentity.isPresent()){
             return taskentity.get();
         }
         return null;
     }
-
-
-    
-
 }
